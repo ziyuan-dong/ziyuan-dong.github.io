@@ -1,0 +1,408 @@
+/*--------------------------------------------------------------
+# Variables
+--------------------------------------------------------------*/
+:root {
+  --nav-bg-color: #09203a;
+  --body-bg-color: #010e1b;
+  --section-hover-color: #042e5f;
+  --green-color: #12d640;
+  --yellow-color: #ffc107;
+  --dark-green-color: #1c7d32;
+
+  --hg-font-size: 36px;
+  --lg-font-size: 20px;
+  --md-font-size: 16px;
+  --sm-font-size: 12px;
+
+  --icon-font-size: 24px;
+}
+
+/*--------------------------------------------------------------
+# Global
+--------------------------------------------------------------*/
+body {
+  width: 100vw;
+  height: 100vh;
+  color: white;
+  background: url(../img/background.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+h1 {
+  font: var(--hg-font-size) Consolas, monaco, monospace;
+  margin: 0;
+}
+
+h2 {
+  font: var(--hg-font-size) Rubik, sans-serif;
+}
+
+h3 {
+  font: lighter var(--lg-font-size) Rubik, sans-serif;
+}
+
+h4 {
+  font: lighter var(--lg-font-size) Consolas, monaco, monospace;
+}
+
+h5 {
+  font: var(--md-font-size) Rubik, sans-serif;
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+#nav-menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100px;
+  padding: 0 5%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+}
+
+#nav-menu .home {
+  font: bold var(--hg-font-size) Rubik, sans-serif;
+  color: white;
+  text-decoration: none;
+}
+
+#nav-menu .section-list {
+  width: 75%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#nav-menu .section-list a {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  font: var(--lg-font-size) Rubik, sans-serif;
+}
+
+#nav-menu .section-list a::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  transition: width 0.5s ease;
+  border-bottom: 2px solid var(--yellow-color);
+  content: "";
+}
+
+#nav-menu .section-lista:hover,
+#nav-menu .section-list a.active {
+  color: var(--green-color);
+}
+
+#nav-menu .section-lista:hover::after,
+#nav-menu .section-list a.active::after {
+  width: 50%;
+}
+
+/*--------------------------------------------------------------
+# Section
+--------------------------------------------------------------*/
+section {
+  position: relative;
+  top: 100px;
+  width: 100%;
+  height: calc(100% - 100px);
+  padding: 30px 10% 0;
+  box-sizing: border-box;
+  overflow: auto;
+}
+
+section::-webkit-scrollbar {
+  width: 0;
+}
+
+/*--------------------------------------------------------------
+# Welcome
+--------------------------------------------------------------*/
+#welcome {
+  position: relative;
+  top: 30%;
+  left: 30%;
+  width: 500px;
+  height: 100px;
+}
+
+#welcome span {
+  color: var(--yellow-color);
+}
+
+/*--------------------------------------------------------------
+# About Me
+--------------------------------------------------------------*/
+#about-me {
+  display: none;
+  flex-direction: column;
+}
+
+#about-me .my-info {
+  width: 100%;
+  height: 260px;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-sizing: border-box;
+  background-color: var(--nav-bg-color);
+  display: flex;
+  align-items: flex-start;
+}
+
+#about-me .my-info img {
+  width: 16%;
+  max-width: 240px;
+  height: auto;
+}
+
+#about-me .my-info .summary {
+  width: 70%;
+  margin: 0 50px;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: var(--md-font-size);
+}
+
+#about-me .my-interests {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#about-me .my-interests .interest-box {
+  width: 22%;
+  height: 80px;
+  padding: 10px;
+  background-color: var(--nav-bg-color);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#about-me .my-interests .interest-box:hover {
+  background-color: var(--section-hover-color);
+}
+
+#about-me .my-interests .interest-box i {
+  font-size: var(--icon-font-size);
+}
+
+#about-me .my-interests .interest-box p {
+  font: var(--md-font-size) Rubik, sans-serif;
+  margin: 0 0 0 10px;
+  padding: 0;
+}
+
+/*--------------------------------------------------------------
+# Education
+--------------------------------------------------------------*/
+#education {
+  display: none;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: flex-start;
+}
+
+#education .education-box {
+  width: 400px;
+  height: 360px;
+  margin-bottom: 30px;
+  background-color: var(--nav-bg-color);
+}
+
+#education .education-box:hover {
+  background-color: var(--section-hover-color);
+}
+
+#education .education-box img {
+  max-width: 100%;
+  height: 100px;
+}
+
+#education .education-box .college-info {
+  padding: 10px;
+}
+
+#education .education-box .college-info h3 {
+  color: var(--green-color);
+}
+
+#education .education-box .college-info h4 {
+  font-style: italic;
+}
+
+#education .education-box .college-info ul {
+  margin: 0 0 0 10px;
+  padding-left: 10px;
+}
+
+/*--------------------------------------------------------------
+# Experience
+--------------------------------------------------------------*/
+#experience {
+  display: none;
+  flex-direction: column;
+}
+
+#experience .experience-box {
+  width: 100%;
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: var(--nav-bg-color);
+  color: white;
+}
+
+#experience .experience-box:hover {
+  background-color: var(--section-hover-color);
+}
+
+#experience .experience-box h3 {
+  color: var(--green-color);
+}
+
+#experience .experience-box h4 {
+  font-style: italic;
+}
+
+#experience .experience-box ul {
+  margin: 0 0 0 10px;
+  padding-left: 10px;
+}
+
+/*--------------------------------------------------------------
+# Projects
+--------------------------------------------------------------*/
+#projects {
+  display: none;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#projects .project-box {
+  width: 350px;
+  margin-bottom: 30px;
+}
+
+#projects .project-box:hover {
+  transform: translateY(-5px) scale(1.005) translateZ(0);
+}
+
+#projects .vbox-container {
+  overflow: hidden;
+}
+
+/*--------------------------------------------------------------
+# Skills
+--------------------------------------------------------------*/
+#skills {
+  display: none;
+  flex-direction: column;
+}
+
+#skills .skill-box {
+  width: 100%;
+  height: 150px;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+#skills .skill-box h3 {
+  color: var(--nav-bg-color);
+}
+
+#skills .skill-box .skill-list {
+  display: flex;
+  align-items: center;
+}
+
+#skills .skill-box .skill-list img {
+  width: 120px;
+  height: 70px;
+}
+
+/*--------------------------------------------------------------
+# Resume
+--------------------------------------------------------------*/
+#resume {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+#resume embed {
+  width: 100%;
+  height: 100%;
+}
+
+/*--------------------------------------------------------------
+# Contact
+--------------------------------------------------------------*/
+#contact {
+  display: none;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: flex-start;
+}
+
+#contact .contact-box {
+  width: 400px;
+  height: 100px;
+  margin-bottom: 30px;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: var(--nav-bg-color);
+  display: flex;
+  align-items: center;
+}
+
+#contact i {
+  height: 50px;
+  width: 50px;
+  font-size: var(--bg-font-size);
+  text-align: center;
+  line-height: 50px;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+}
+
+#contact .info-box {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#contact .contact-box h3 {
+  margin: 0;
+  color: var(--green-color);
+}
+
+#contact .contact-box p {
+  padding: 0;
+  margin: 0;
+  font-size: var(--md-font-size);
+}
+
+#contact .contact-box:hover {
+  background-color: var(--section-hover-color);
+}
