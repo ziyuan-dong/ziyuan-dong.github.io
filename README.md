@@ -1,3 +1,3 @@
 ### Welcome to my github
-* [My portfolio](https://dongziyuan.github.io/)
-* [A Hash Generator](https://dongziyuan.github.io/encode.html)
+* [My portfolio](https://ziyuan-dong.github.io/)
+* [A Hash Generator](https://ziyuan-dong.github.io/encode.html)
