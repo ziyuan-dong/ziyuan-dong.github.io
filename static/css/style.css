@@ -60,6 +60,7 @@ h5 {
   top: 0;
   width: 100%;
   height: 100px;
+  margin-bottom: 30px;
   padding: 0 5%;
   box-sizing: border-box;
   display: flex;
@@ -216,8 +217,8 @@ section::-webkit-scrollbar {
 #education {
   display: none;
   flex-wrap: wrap;
-  justify-content: space-around;
-  align-content: flex-start;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 #education .education-box {
@@ -259,12 +260,16 @@ section::-webkit-scrollbar {
 #experience {
   display: none;
   flex-direction: column;
+  gap: 30px;
 }
 
 #experience .experience-box {
   width: 100%;
-  margin-bottom: 30px;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
   background-color: var(--nav-bg-color);
   color: white;
 }
@@ -273,17 +278,22 @@ section::-webkit-scrollbar {
   background-color: var(--section-hover-color);
 }
 
+#experience .experience-box .sub-title {
+  display: flex;
+  justify-content: space-between;
+}
+
 #experience .experience-box h3 {
   color: var(--green-color);
 }
 
-#experience .experience-box h4 {
-  font-style: italic;
+#experience .experience-box p {
+  margin: 0;
 }
 
 #experience .experience-box ul {
-  margin: 0 0 0 10px;
-  padding-left: 10px;
+  padding-left: 5px;
+  margin: 0 10px;
 }
 
 /*--------------------------------------------------------------
@@ -314,13 +324,13 @@ section::-webkit-scrollbar {
 #skills {
   display: none;
   flex-direction: column;
+  gap: 30px;
 }
 
 #skills .skill-box {
   width: 100%;
   height: 150px;
   padding: 20px;
-  margin-bottom: 30px;
   box-sizing: border-box;
   background-color: white;
 }
